@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="drag1">1</string>
+    <string name="drag2">2</string>
+    <string name="drag3">3</string>
+    <string name="drag4">4</string>
+    <string name="drag5">5</string>
+    <string name="drag6">6</string>
+    <string name="drag7">7</string>
+    <string name="drag8">8</string>
+    <string name="drag9">9</string>
+    <string name="title_activity_level_select">LevelSelect</string>
+    <string name="level1">Level 1</string>
+    <string name="level2">Level 2</string>
+    <string name="title_activity_select_grille">SelectGrille</string>
+
+</resources>

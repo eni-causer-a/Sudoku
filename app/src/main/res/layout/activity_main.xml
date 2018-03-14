@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="amaury.android.sudoku.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/grille"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drag1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag1"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag2"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag3"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag4"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag5"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag6"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag7"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="475dp" />
+
+            <TextView
+                android:id="@+id/drag8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag8"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="476dp" />
+
+            <TextView
+                android:id="@+id/drag9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/drag9"
+                tools:layout_editor_absoluteX="61dp"
+                tools:layout_editor_absoluteY="476dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
