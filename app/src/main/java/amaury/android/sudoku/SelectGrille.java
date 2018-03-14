@@ -35,6 +35,7 @@ public class SelectGrille extends Activity implements AdapterView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        //Message avec 3 params
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, String.valueOf(grille[i].getlvl()), Toast.LENGTH_LONG);
         toast.show();
