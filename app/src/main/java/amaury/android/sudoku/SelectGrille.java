@@ -1,5 +1,6 @@
 package amaury.android.sudoku;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import static android.app.PendingIntent.getActivity;
 
 public class SelectGrille extends Activity implements AdapterView.OnItemClickListener {
     vgrille[] grille;
@@ -27,7 +30,7 @@ public class SelectGrille extends Activity implements AdapterView.OnItemClickLis
         grille = new vgrille[]{grille1,grille2};
 
 
-        ArrayAdapter <vgrille>adapter = new ArrayAdapter<vgrille>(this, android.R.layout.simple_list_item_1, android.R.id.text1 , grille );
+        ArrayAdapter <vgrille>adapter = new ArrayAdapter<vgrille>(this, android.R.layout.simple_list_item_2, android.R.id.text1 , grille );
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
 
@@ -36,8 +39,18 @@ public class SelectGrille extends Activity implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //Message avec 3 params
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, String.valueOf(grille[i].getlvl()), Toast.LENGTH_LONG);
-        toast.show();
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+// 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Niveau: "+ grille[i].getlvl()+" Numéro: "+ grille[i].getnum()+" Avancement: "+grille[i].getdone())
+                .setTitle("Informations niveau");
+
+// 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+    }
+
+    public Context getActivity() {
+        return SelectGrille.this;
     }
 }
