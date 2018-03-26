@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.app.PendingIntent.getActivity;
@@ -30,7 +32,14 @@ public class SelectGrille extends Activity implements AdapterView.OnItemClickLis
         grille = new vgrille[]{grille1,grille2};
 
 
-        ArrayAdapter <vgrille>adapter = new ArrayAdapter<vgrille>(this, android.R.layout.simple_list_item_2, android.R.id.text1 , grille );
+        ArrayAdapter <vgrille>adapter = new ArrayAdapter<vgrille>(this, android.R.layout.simple_list_item_1, android.R.id.text1 , grille )
+        {@Override
+        public View getView (int position, View convertView, ViewGroup parent){
+            View view = super.getView( position,  convertView,  parent);
+            TextView text1 = view.findViewById(android.R.id.text1);
+            text1.setText("Niveau: "+ grille[position].getnum());
+            return view;
+        }};
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
 
@@ -48,6 +57,8 @@ public class SelectGrille extends Activity implements AdapterView.OnItemClickLis
 
 // 3. Get the AlertDialog from create()
         AlertDialog dialog = builder.create();
+
+        dialog.show();
     }
 
     public Context getActivity() {
