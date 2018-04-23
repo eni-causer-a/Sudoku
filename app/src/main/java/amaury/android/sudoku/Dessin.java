@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.Display;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -130,12 +131,20 @@ public class Dessin extends View {
                 }
                 l+=margeW;r+=margeW;
                 k++;
-
-
             }
             l=0;r=l+margeW;
             b+=margeH;t+=margeH;
 
+        }
+
+        float posx, posy;
+        posx= 0;
+        posy= 1300;
+
+        for (int h=1; h<10;h++){
+
+            new Text(String.valueOf(h), posx, posy ).draw(canvas);
+            posx = posx +120;
         }
 
 
@@ -146,6 +155,15 @@ public class Dessin extends View {
         this.chaine = chaine;
     }
 
+
+    public boolean ontouch(View v, MotionEvent event){
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                break;
+            case MotionEvent.ACTION_UP:
+                break;
+        }return true;
+    }
 
 
 }
