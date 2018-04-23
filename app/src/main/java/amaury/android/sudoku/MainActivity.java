@@ -22,16 +22,6 @@ public class MainActivity extends Activity {
 
 
 
-        /*
-        int Grille[][]= new int[8][8];
-        int compteur=0;
-        for (int i = 0;i <=8;i++){
-            for (int j = 0;i <=8;i++){
-                Grille[i][j] = Integer.parseInt(chaine_sudoku.substring(compteur));
-                compteur++;
-            }
-        }*/
-
 
     }
 }

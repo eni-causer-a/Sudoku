@@ -125,7 +125,8 @@ public class Dessin extends View {
             for(int j = 0;j<9;j++) {
                 new Care(l, t, r , b).draw(canvas);
                 if(!chaine.substring(k, k+1).equals("0")) {
-                    new Text(valeur_case = chaine.substring(k, k + 1), l, t - (t - b)).draw(canvas);
+                    float valeur_x = l+((l-r)*(1/2));
+                    new Text( chaine.substring(k, k + 1),valeur_x , b-((t-b)*(1/2))).draw(canvas);
                 }
                 l+=margeW;r+=margeW;
                 k++;
